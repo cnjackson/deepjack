@@ -1,0 +1,32 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Arial", sans-serif;
+	line-height: 1.6;
+	background-color: $background-light;
+}
+
+.app-container {
+	padding: 2rem;
+	max-width: $max-width;
+	margin: 0 auto;
+}
+
+.settings-icon {
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	cursor: pointer;
+	@include transition(color);
+
+	&:hover {
+		color: $primary-color;
+	}
+}
